@@ -92,10 +92,12 @@ class SocialExportCommand extends Command
             $name .= ' @MidsouthMakers';
         }
 
-        // If the name contains 'Midsouth Makers' use their twitter
         if (strpos($name, 'MemphisPHP') !== false) {
-//            $name = str_replace($name, 'MemphisPHP', '@MemphisPHP');
             $name .= ' @MemphisPHP';
+        }
+        
+        if (strpos(strtolower($name), 'ruby') !== false) {
+            $name .= ' @MemphisRuby';
         }
 
         return $name;
